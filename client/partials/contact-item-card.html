@@ -1,0 +1,16 @@
+<div class="contact-item-card" ng-class="{'active':isActive}">
+	<div class="avatar-wrapper">
+		<div>
+			{{cs.getInitials(data.name)}}
+		</div>
+	</div>
+	<div class="data-wrapper">
+		<div class="name" md-highlight-text="q">
+			<div>{{::data.name}}</div>
+			<div>{{::data.phone}}</div>
+		</div>
+		<div class="phone" md-highlight-text="q">
+			{{::data.age}} {{cs.contact.age > 1 ? 'years' : 'year'}}
+		</div>
+	</div>
+</div>

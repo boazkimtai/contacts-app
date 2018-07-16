@@ -1,0 +1,29 @@
+<div id="contacts-page">
+	<div class="left-page">
+		<div class="header">
+			<div class="title-wrapper">
+				<div>
+					<span>Contacts</span>
+					<button>Add</button>
+				</div>
+			</div>
+			<div class="searchbox-wrapper">
+				<input type="text" name="" ng-keyup="search()" ng-model="q" placeholder="Search"/>
+			</div>
+		</div>
+		<div class="items-list-wrapper">
+			<div class="blnk">
+				<div>
+					<div class="loader" ng-if="isLoading"></div>
+				</div>
+			</div>
+			<div class="scrollable" ng-scrollbars ng-scrollbars-config="config">
+				<contact-item-card data="contact" ng-repeat="contact in contacts"></contact-item-card>
+			</div>
+		</div>
+	</div>
+	<div class="item-page-wrapper">
+		<contact-item>
+		</contact-item>
+	</div>
+</div>

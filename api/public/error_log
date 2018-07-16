@@ -1,0 +1,4 @@
+[12-Feb-2018 05:05:11 UTC] PHP Parse error:  syntax error, unexpected 'list' (T_LIST), expecting identifier (T_STRING) in /home1/lynmerce/api/laravel/app/Http/Controllers/RequestsController.php on line 30
+[12-Feb-2018 05:10:20 UTC] PHP Parse error:  syntax error, unexpected 'list' (T_LIST), expecting identifier (T_STRING) in /home1/lynmerce/api/laravel/app/Http/Controllers/RequestsController.php on line 30
+[12-Feb-2018 05:13:02 UTC] PHP Parse error:  syntax error, unexpected 'list' (T_LIST), expecting identifier (T_STRING) in /home1/lynmerce/api/laravel/app/Http/Controllers/RequestsController.php on line 25
+[12-Feb-2018 05:13:37 UTC] PHP Parse error:  syntax error, unexpected 'list' (T_LIST), expecting identifier (T_STRING) in /home1/lynmerce/api/laravel/app/Http/Controllers/RequestsController.php on line 30

@@ -1,0 +1,39 @@
+<div id="login-form-wrapper">
+	<div>
+		<form name="loginForm">
+		<div class="input-wrapper">
+			<div class="error">
+				<p>
+					{{error}}
+				</p>
+			</div>
+		</div>
+		<div class="input-wrapper">
+			<div>
+				<label>Email address</label>
+			</div>
+			<div>
+				<input type="email" ng-model="user.email" name="email" placeholder="e.g johndoe@xample.com" ng-class="{'error':loginForm.email.$error.email}" autocomplete="off"/>
+			</div>
+			<div class="error">
+				<p ng-if="loginForm.email.$error.email">
+					Invalid email address
+				</p>
+			</div>
+		</div>
+		<div class="input-wrapper">
+			<div>
+				<label>Password</label>
+			</div>
+			<div>
+				<input type="password" ng-model="user.password" name="password" placeholder="password"/>
+			</div>
+			<div>
+			</div>
+		</div>
+		<div>
+			<button ng-click="login()" ng-disabled="!user.password||!user.email||loginForm.email.$error.email||isSaving">Log in</button>
+		</div>
+		</form>
+	</div>
+</div>

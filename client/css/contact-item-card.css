@@ -1,0 +1,60 @@
+.contact-item-card{
+	position: relative;
+	display: grid;
+	grid-template-columns: 4em 1fr;
+	padding: 0.3em 0;
+}
+.contact-item-card .avatar-wrapper{
+}
+.contact-item-card .avatar-wrapper > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	width: 2.4em;
+	height: 2.4em;
+	border: solid rgba(255, 255, 255, 1) 0.125em;
+	border-radius: 3em;
+	background-color: rgba(0, 148, 235, 1);
+	color: rgba(255, 255, 255, 1);
+	font-size: 1em;
+}
+.contact-item-card:hover{
+	background-color: rgba(245, 245, 245, 1);
+}
+.contact-item-card .data-wrapper{
+}
+.contact-item-card .data-wrapper .name > div{
+	display: inline-block;
+	width: calc(100% / 2);
+}
+.contact-item-card .data-wrapper .name > div:nth-child(2){
+	padding-right: 0.4em;
+	width: calc(100% / 2 - 0.4em);
+	text-align: right;
+	float: right;
+}
+.contact-item-card .data-wrapper .phone{
+	padding: 0.3em 0;
+}
+.contact-item-card.active{
+	background-color: rgba(0, 100, 235, 1);
+}
+.contact-item-card.active{
+	background-color: rgba(0, 100, 235, 1);
+	color: rgba(255, 255, 255, 1);
+}
+.contact-item-card.active::after{
+	position: absolute;
+	top: calc(50% - 0.1em);
+	right: -0.3em;
+	border: solid rgba(255, 255, 255, 1) 0.3em;
+	border-right-color: transparent;
+	border-bottom-color: transparent;
+	content: "";
+	transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	-webkit-transform: rotate(-45deg);
+	-ms-transform: rotate(-45deg);
+	-o-transform: rotate(-45deg);
+}

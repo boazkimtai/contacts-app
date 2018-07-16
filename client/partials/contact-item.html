@@ -1,0 +1,24 @@
+<div class="contact-item-wrapper">
+	<div class="header">
+		<div>
+			<span>{{cs.contact.name}}</span>
+			<a href="index.html#/"><button ng-click="logout()">Logout</button></a>
+		</div>
+	</div>
+	<div class="img-phone-age-wrapper">
+		<div class="img-wrapper">
+			<div>
+				<div>{{cs.getInitials(cs.contact.name)}}</div>
+			</div>
+		</div>
+		<div class="phone-age">
+			<div><span>Phone</span>{{cs.contact.phone}}</div>
+			<div><span>Age</span>{{cs.contact.age}} {{cs.contact.age > 1 ? 'years' : 'year'}}</div>
+		</div>
+		<div class="blnk" ng-if="!cs.contact">
+		<p>
+			Select a contact from list
+		</p>
+	</div>
+	</div>
+</div>

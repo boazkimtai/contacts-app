@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>
+		Contacts App
+	</title>
+	<style type="text/css">			
+		@font-face{
+			font-family: RobotoBlack;
+			font-style: normal;
+			font-weight: normal;
+			src: url('assets/fonts/Roboto-Black.ttf');
+		}
+		@font-face{
+			font-family: RobotoRegular;
+			font-style: normal;
+			font-weight: normal;
+			src: url('assets/fonts/Roboto-Regular.ttf');
+		}
+		</style>
+	<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/forms.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/contacts-page.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/contact-item.css"/>
+	
+	<link rel="stylesheet" type="text/css" href="./lib/angular-material/angular-material.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./lib/ng-scrollbar/ng-scrollbar.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/contact-item-card.css"/>
+	<script src="./lib/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="./lib/angular/angular.min.js"></script>
+	<script type="text/javascript" src="./lib/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="./lib/angular-cookies/angular-cookies.min.js"></script>
+	<script type="text/javascript" src="./lib/ng-scrollbars/scrollbars.min.js"></script>
+	<link rel="stylesheet" href="./lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css"
+          type="text/css"/>
+    <script src="./lib/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script type="text/javascript" src="./lib/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<script type="text/javascript" src="./app.js"></script>
+	<script type="text/javascript" src="./services/auth.service.js"></script>
+	<script type="text/javascript" src="./services/register.service.js"></script>
+	<script type="text/javascript" src="./services/contact.service.js"></script>
+	<script type="text/javascript" src="./services/contacts.service.js"></script>
+	<script type="text/javascript" src="./directives/app.directives.js"></script>
+	<script type="text/javascript" src="./contacts/contacts.module.js"></script>
+	<script type="text/javascript" src="./contacts/contacts.controller.js"></script>
+</head>
+<body ng-app="app">
+	<div class="content-wrapper">
+		<ng-view></ng-view>
+		<div id="outer-form-wrapper" ng-show="tab=='0'||tab=='1'" ng-show="false" srform-bucket>
+			<div id="forms-wrapper">
+				<div>
+					<div class="tabs-wrapper">
+						<div>
+							<div class="tab-item left" ng-class="{'active':tab=='0'}" ng-click="switchTab('0')">Log in</div>
+							<div class="tab-item right" ng-class="{'active':tab=='1'}" ng-click="switchTab('1')">Register</div>
+							<div class="cfx"></div>
+						</div>
+						<div class="tab-underliner" ng-class="{'left':tab=='1','right':tab=='1'}">
+						</div>
+					</div>
+					<div class="forms">
+						<div class="login" ng-class="{'active':tab=='0'}">
+							<login-form>
+							</login-form>
+						</div>
+						<div class="register" ng-class="{'active':tab=='1'}">
+							<register-form>
+							</register-form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

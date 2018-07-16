@@ -1,0 +1,47 @@
+#login-form-wrapper,
+#register-form-wrapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding: 2em 1.4em;
+	border-radius: 0.4em;
+	box-shadow: 0 0 1em rgba(100, 100, 100, 0.3);
+}
+#login-form-wrapper > div,
+#register-form-wrapper > div{
+	width: 100%;
+}
+#login-form-wrapper .input-wrapper,
+#register-form-wrapper .input-wrapper{
+	padding: 0.4em 0;
+}
+#register-form-wrapper{
+	padding: 1em 1.4em;
+}
+#login-form-wrapper .input-wrapper label,
+#register-form-wrapper .input-wrapper label{
+	display: block;
+	padding: 0.4em 0;
+}
+#login-form-wrapper .input-wrapper input,
+#register-form-wrapper .input-wrapper input{
+	width: calc(100% - 1.4em);
+}
+#login-form-wrapper .input-wrapper div.error,
+#register-form-wrapper .input-wrapper div.error{
+	font-size: 0.9em;
+	color: rgba(200, 0, 0, 1);
+}
+#login-form-wrapper .input-wrapper div.error p,
+#register-form-wrapper .input-wrapper p{
+	margin: 0;
+	padding: 0;
+}
+#login-form-wrapper button,
+#register-form-wrapper button{
+	margin-top: 1em;
+	float: right;
+}
+#register-form-wrapper button{
+	background-color: rgba(0, 200, 0, 1) !important;
+}

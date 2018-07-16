@@ -1,0 +1,71 @@
+<div id="register-form-wrapper">
+	<div>
+	<form name="registerForm">
+	<div class="input-wrapper">
+		<div class="error">
+			<p>
+				{{error}}
+			</p>
+		</div>
+	</div>
+	<div class="input-wrapper">
+		<div>
+			<label>Name</label>
+		</div>
+		<div>
+			<input type="text" name="name" ng-model="user.name" maxlength="30" placeholder="e.g John Doe" ng-class="{'error':registerForm.name.$error.pattern&&registerForm.name.$touched}" ng-pattern="/^[a-z]{1,15}\s{1}[a-z]{1,15}$/i" autocomplete="off"/>				
+		</div>
+		<div class="error">
+			<p ng-if="registerForm.name.$error.pattern&&registerForm.name.$touched">
+				First/last name must contain a max of 15 chatacters
+			</p>
+		</div>
+	</div>
+	<div class="input-wrapper">
+		<div>
+			<label>Email address</label>
+		</div>
+		<div>
+			<input type="email" name="email" ng-model="user.email" placeholder="e.g johndoe@example.com" autocomplete="off" maxlength="30" ng-class="{'error':emailExists}"/>
+		</div>
+		<div class="error">
+			<p ng-if="registerForm.email.$error.email">
+				Invalid email address
+			</p>
+			<p ng-if="emailExists&&!registerForm.email.$error.email">
+				Email already taken
+			</p>
+		</div>
+	</div>
+	<div class="input-wrapper">
+		<div>
+			<label>Password</label>
+		</div>
+		<div>
+			<input type="password" name="password" ng-model="user.password" ng-pattern="'.{4,14}'" maxlength="14"/>
+		</div>
+		<div class="error">
+			<p ng-if="registerForm.password.$error.pattern && registerForm.password.$touched">
+				password must contain 4 to 14 characters
+			</p>
+		</div>
+	</div>
+	<div class="input-wrapper">
+		<div>
+			<label>Confirm password</label>
+		</div>
+		<div>
+			<input type="password" name="confirm_password" ng-model="confirm_password" ng-class="{'error':registerForm.confirm_password.$touched && user.password != confirm_password}"/>
+		</div>
+		<div class="error">
+			<p ng-if="registerForm.confirm_password.$touched && user.password != confirm_password">
+				passwords don't match
+			</p>
+		</div>
+	</div>
+	<div>
+		<button ng-disabled="registerForm.name.$error.pattern||registerForm.email.$error.email||registerForm.password.$error.pattern||user.password != confirm_password||!user.name||!user.email||!user.password||isSaving" ng-click="register()">Register</button>
+	</div>
+	</form>
+</div>
+</div>

@@ -1,0 +1,68 @@
+.contact-item-wrapper{
+	position: relative;;
+	height: 100%;
+}
+.contact-item-wrapper .header{
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 2.6em;
+	padding: 0 0.4em;
+	border-bottom: solid rgba(100, 100, 100, 0.1) 0.0625em;
+}
+.contact-item-wrapper .header button{
+	padding: 0.3em 0.7em;
+	border: solid rgba(100, 100, 100, 1) 0.0625em;
+	background-color: rgba(255, 255, 255, 1);
+	color: rgba(100, 100, 100, 1);
+	float: right;
+}
+.contact-item-wrapper .img-phone-age-wrapper{
+	position: absolute;
+	top: 2.6em;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+.contact-item-wrapper .img-wrapper{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	text-align: center;
+	height: 50%;
+	background-color: rgba(0, 148, 235, 1);
+}
+.contact-item-wrapper .img-wrapper > div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	margin-top: calc(50% - 2.125em);
+	width: 4em;
+	height: 4em;
+	border: solid rgba(255, 255, 255, 1) 0.125em;
+	border-radius: 3em;
+	background-color: rgba(0, 160, 235, 1);
+	color: rgba(255, 255, 255, 1);
+	font-size: 1em;
+}
+.contact-item-wrapper .phone-age{
+	padding: 1em;
+	font-size: 1.4em;
+}
+.contact-item-wrapper .phone-age > div{
+	display: inline-block;
+	width: calc(50% - 2em);
+	color: rgba(100, 100, 100, 1);
+}
+.contact-item-wrapper .phone-age > div:nth-child(2){
+	text-align: right;
+}
+.contact-item-wrapper .phone-age > div span{
+	display: inline-block;
+	margin-right: 0.7em;
+}
