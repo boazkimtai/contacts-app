@@ -40,16 +40,15 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`name`, `phone`, `age`, `id`) VALUES
-('Boaz Kim', '+254703700932', 30, 1),
-('John Doe', '+254703700932', 26, 2),
-('Boaz', '+1703700932', 25, 3),
-('Kim', '+2703700932', 27, 4),
-('Kim Boaz', '+91703700932', 28, 5),
-('Doe John', '+91703700932', 25, 6),
-('John', '+2703700900', 26, 7),
+('John Doe', '+254703100924', 26, 2),
+('Boaz', '+1703100924', 25, 3),
+('Kim', '+2703700924', 27, 4),
+('Kim Boaz', '+91703100924', 28, 5),
+('Doe John', '+91703100924', 25, 6),
+('John', '+2703100900', 26, 7),
 ('John', '+3100000000', 27, 8),
-('Boaz Doe', '+1703700900', 27, 9),
-('John Kim', '+254703700932', 0, 10);
+('Boaz Doe', '+1703100900', 27, 9),
+('John Kim', '+254703100924', 0, 10);
 
 -- --------------------------------------------------------
 
@@ -69,8 +68,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`name`, `email`, `password`, `id`) VALUES
-('Boaz Kim', 'boazkimutai@gmail.com', '$2y$10$NYEh1GKEPkOaHcGmrbdvE.Qgg13D7Zkdp627CwxSuxa5.QZ7g/7sK', 7),
-('Boaz Kim', 'berazboy@gmail.com', '$2y$10$CtkbN.qiPAQvrtx7veh2wOW7Wo9mG6R.F7NEM9i19Lp6JoZGr5ntO', 8);
+('Boaz Kim', 'kim@gmail.com', '$2y$10$NYEh1GKEPkOaHcGmrbdvE.Qgg13D7Zkdp627CwxSuxa5.QZ7g/7sK', 7),
+('Boaz Kim', 'johndoe@example.com', '$2y$10$CtkbN.qiPAQvrtx7veh2wOW7Wo9mG6R.F7NEM9i19Lp6JoZGr5ntO', 8);
 
 --
 -- Indexes for dumped tables
